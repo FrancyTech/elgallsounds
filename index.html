@@ -8,35 +8,24 @@
     <style>
         body {
             background-color: #f5f5f5;
-            font-family: 'Arial', sans-serif;
-            color: #333;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
         }
 
         .container {
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 8px;
             padding: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
         }
 
         h1 {
-            color: #007BFF;
-            font-size: 30px;
+            text-align: center;
+            color: #333;
         }
 
         .btn-primary {
             background-color: #007BFF;
             border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
-            font-size: 20px;
-            margin: 10px;
-            transition: background-color 0.3s ease;
-            color: #fff;
-            cursor: pointer;
         }
 
         .btn-primary:hover {
@@ -46,52 +35,54 @@
         .btn-danger {
             background-color: #DC3545;
             border: none;
-            border-radius: 50px;
-            padding: 15px 30px;
-            font-size: 20px;
-            margin: 10px;
-            transition: background-color 0.3s ease;
-            color: #fff;
-            cursor: pointer;
         }
 
         .btn-danger:hover {
             background-color: #a82332;
         }
 
+        .row {
+            margin-top: 20px;
+        }
+
         h2 {
             color: #333;
+        }
+
+        #score {
             font-size: 24px;
+            font-weight: bold;
         }
 
         .score-display {
             font-size: 20px;
         }
-
-        iframe {
-            border: none;
-            width: 100%;
-            height: 200px;
-            margin: 20px 0;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container mt-5">
         <h1>El Gall Sound</h1>
         <audio id="audio" src="934.mp3"></audio>
-        <div class="row">
+        <div class="row mt-4">
             <div class="col-md-6">
                 <h2>El GALL</h2>
-                <button class="btn btn-primary" id="elGallButton">+</button>
-                <p class="score-display"><span id="elGallScore" class="score-display">0</span></p>
+                <button class="btn btn-primary" id="elGallButton">Aggiungi Punto</button>
+                <p>Punteggio: <span id="elGallScore" class="score-display">0</span></p>
             </div>
             <div class="col-md-6">
-                <input type="text" placeholder="Squadra Avversaria"></input>
-                <button class="btn btn-primary" id="squadraDueButton">+</button>
-                <p class="score-display"><span id="squadraDueScore" class="score-display">0</span></p>
+                <h2>SQUADRA DUE</h2>
+                <button class="btn btn-primary" id="squadraDueButton">Aggiungi Punto</button>
+                <p>Punteggio: <span id="squadraDueScore" class="score-display">0</span></p>
             </div>
         </div>
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h2>Segnapunti da Pallavolo</h2>
+                <p>El GALL: <span id="elGallVolleyScore" class="score-display">0</span></p>
+                <p>SQUADRA DUE: <span id="squadraDueVolleyScore" class="score-display">0</span></p>
+            </div>
+        </div>
+      <iframe width="110" height="200" src="https://www.myinstants.com/instant/applause-el-gall-good-one-21075/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/carica-el-gall-57999/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/fischio-el-gall-89295/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/gallo-canta-2-39110/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/gallo-clock-18662/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/gallo-el-gall-41715/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/musichetta-motivazionale-96201/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/super-spike-el-gall-7596/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/victory-music-el-gall-31183/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/victory-sound-el-gall-2-59649/embed/" frameborder="0" scrolling="no"></iframe>
       <div class="row mt-4">
           <div class="col-md-12">
               <button class="btn btn-danger" id="resetButton">Resetta punti</button>
@@ -100,6 +91,8 @@
             <button class="btn btn-danger" id="stopButton">Ferma audio</button>
         </div>
       </div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=TqZcYT9Mp9IJRFgn&amp;list=PLgNl6Y0-i4_EfwfouYJWVhHSvioLqpeCh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
